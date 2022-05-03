@@ -13,7 +13,7 @@ package {{ .QueryPackageName }}
 
 import (
 	"github.com/erlangs/okoo/src/models"
-	"github.com/hexya-erp/pool/{{ .QueryPackageName }}/{{ .SnakeName }}"
+	"github.com/erlangs/pool/{{ .QueryPackageName }}/{{ .SnakeName }}"
 )
 
 type {{ .Name }}Condition = {{ .SnakeName }}.Condition
@@ -33,8 +33,8 @@ var poolModelsQueryTemplate = template.Must(template.New("").Parse(`
 package {{ .SnakeName }}
 
 import (
-	"github.com/erlangs/okoo/src/models/operator"
-	"github.com/erlangs/okoo/src/models"
+	"github.com/erlangs/pool/src/models/operator"
+	"github.com/erlangs/pool/src/models"
 {{ range .TypesDeps }} 	"{{ . }}"
 {{ end }}
 )

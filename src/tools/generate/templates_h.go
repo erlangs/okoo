@@ -16,10 +16,10 @@ package {{ .ModelsPackageName }}
 import (
 	"github.com/erlangs/okoo/src/models"
 {{- if ne .ModelType "Mixin" }}	
-	"github.com/hexya-erp/pool/{{ .QueryPackageName }}"
+	"github.com/erlangs/pool/{{ .QueryPackageName }}"
 {{- end }}
-	"github.com/hexya-erp/pool/{{ .ModelsPackageName }}/{{ .SnakeName }}"
-    "github.com/hexya-erp/pool/{{ .InterfacesPackageName }}"
+	"github.com/erlangs/pool/{{ .ModelsPackageName }}/{{ .SnakeName }}"
+    "github.com/erlangs/pool/{{ .InterfacesPackageName }}"
 )
 
 // ------- MODEL ---------
@@ -143,8 +143,8 @@ var poolModelsDirTemplate = template.Must(template.New("").Parse(`
 package {{ .SnakeName }}
 
 import (
-    "github.com/hexya-erp/pool/{{ .QueryPackageName }}"
-    "github.com/hexya-erp/pool/{{ .InterfacesPackageName }}"
+    "github.com/erlangs/pool/{{ .QueryPackageName }}"
+    "github.com/erlangs/pool/{{ .InterfacesPackageName }}"
 {{ range .Deps }} 	"{{ . }}"
 {{ end }}
 )

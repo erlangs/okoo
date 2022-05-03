@@ -312,6 +312,7 @@ func addFieldTypesToModelData(mData *modelData) {
 }
 
 // createPoolFiles creates all pool files for the given model data
+// mark point
 func createPoolFiles(dir string, mData *modelData) {
 	mData.sort()
 	// create the model's interface file in interface directory (m)

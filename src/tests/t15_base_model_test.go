@@ -7,11 +7,11 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/erlangs/okoo/h"
+	"github.com/erlangs/okoo/m"
+	"github.com/erlangs/okoo/q"
 	"github.com/erlangs/okoo/src/models"
 	"github.com/erlangs/okoo/src/models/security"
-	"github.com/hexya-erp/pool/h"
-	"github.com/hexya-erp/pool/m"
-	"github.com/hexya-erp/pool/q"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

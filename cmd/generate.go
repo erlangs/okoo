@@ -212,7 +212,7 @@ func copyGoModReplaces(poolDir string) {
 		panic(err)
 	}
 	for _, repl := range replaces.Replace {
-		if repl.Old.Path == "github.com/hexya-erp/pool" {
+		if repl.Old.Path == "github.com/erlangs/okoo" {
 			continue
 		}
 		oldPath := repl.Old.Path
