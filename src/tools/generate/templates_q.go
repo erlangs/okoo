@@ -33,8 +33,8 @@ var poolModelsQueryTemplate = template.Must(template.New("").Parse(`
 package {{ .SnakeName }}
 
 import (
-	"github.com/erlangs/pool/src/models/operator"
-	"github.com/erlangs/pool/src/models"
+	"github.com/erlangs/okoo/src/models/operator"
+	"github.com/erlangs/okoo/src/models"
 {{ range .TypesDeps }} 	"{{ . }}"
 {{ end }}
 )

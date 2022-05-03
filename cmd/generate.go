@@ -277,7 +277,7 @@ var emptyPoolGoMod = template.Must(template.New("").Parse(`
 
 module github.com/erlangs/pool
 
-require github.com/erlangs/okoo v1.0.0
+require github.com/erlangs/okoo v1.0.1
 
 `))
 
