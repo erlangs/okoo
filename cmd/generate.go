@@ -160,7 +160,7 @@ func loadProgram(targetPaths []string, tests bool) ([]*packages.Package, error) 
 }
 
 func replacePoolDirInGoMod(poolDir string) {
-	runCommand("go", "mod", "edit", "-replace", fmt.Sprintf("github.com/hexya-erp/pool@v1.0.2=%s", poolDir))
+	runCommand("go", "mod", "edit", "-replace", fmt.Sprintf("github.com/erlangs/pool@v1.0.0=%s", poolDir))
 }
 
 func computeDirs(projectDir string) (string, string) {
