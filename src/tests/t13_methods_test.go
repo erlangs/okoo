@@ -17,11 +17,11 @@ package tests
 import (
 	"testing"
 
-	"github.com/erlangs/okoo/h"
-	"github.com/erlangs/okoo/m"
-	"github.com/erlangs/okoo/q"
 	"github.com/erlangs/okoo/src/models"
 	"github.com/erlangs/okoo/src/models/security"
+	"github.com/erlangs/pool/h"
+	"github.com/erlangs/pool/m"
+	"github.com/erlangs/pool/q"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

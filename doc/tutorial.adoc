@@ -208,7 +208,7 @@ package openacademy
 
 import (
 	"github.com/erlangs/okoo/src/models"
-	"github.com/erlangs/okoo/h" // <1>
+	"github.com/erlangs/pool/h" // <1>
 )
 
 var fields_OpenAcademyCourse = map[string]models.FieldDefinition{
@@ -586,7 +586,7 @@ package openacademy
 import (
 	"github.com/erlangs/okoo/src/models"
 	"github.com/erlangs/okoo/src/models/types"
-	"github.com/erlangs/okoo/h"
+	"github.com/erlangs/pool/h"
 )
 
 var fields_OpenAcademySession = map[string]models.FieldDefinition{
@@ -721,7 +721,7 @@ package openacademy
 
 import (
 	"github.com/erlangs/okoo/src/models"
-	"github.com/erlangs/okoo/h"
+	"github.com/erlangs/pool/h"
 )
 
 var fields_OpenAcademyCourse = map[string]models.FieldDefinition{
@@ -747,7 +747,7 @@ package openacademy
 import (
 	"github.com/erlangs/okoo/src/models"
 	"github.com/erlangs/okoo/src/models/types"
-	"github.com/erlangs/okoo/h"
+	"github.com/erlangs/pool/h"
 )
 
 var fields_OpenAcademySession = map[string]models.FieldDefinition{
@@ -982,7 +982,7 @@ package openacademy
 
 import (
 	"github.com/erlangs/okoo/src/models"
-	"github.com/erlangs/okoo/h"
+	"github.com/erlangs/pool/h"
 )
 
 var fields_Partner = map[string]models.FieldDefinition{
@@ -1049,7 +1049,7 @@ Methods are created by `NewMethod()`:
 import (
 (...)
 	// We need to import m to define methods
-	"github.com/erlangs/okoo/m"
+	"github.com/erlangs/pool/m"
 )
 (...)
 ----
@@ -1310,7 +1310,7 @@ We can add a domain to limit instructors to partners who are instructors:
 ----
 import (
 (...)
-	"github.com/erlangs/okoo/q"
+	"github.com/erlangs/pool/q"
 )
 ----
 [source,go]
@@ -1754,7 +1754,7 @@ of the group must be able to modify it.
 ----
 import (
 (...)
-	"github.com/erlangs/okoo/q"
+	"github.com/erlangs/pool/q"
 )
 
 func getCurrentUser(rs h.OpenAcademyCourseSet) h.UserSet {
@@ -1804,8 +1804,8 @@ package openacademy
 
 import (
 	"github.com/erlangs/okoo/src/models"
-	"github.com/erlangs/okoo/h"
-	"github.com/erlangs/okoo/q"
+	"github.com/erlangs/pool/h"
+	"github.com/erlangs/pool/q"
 )
 
 var fields_OpenAcademyWizard = map[string]models.FieldDefinition{
