@@ -15,12 +15,17 @@ package {{ .ModelsPackageName }}
 
 import (
 	"github.com/erlangs/okoo/src/models"
+	"github.com/erlangs/okoo/src/actions"
+	"github.com/erlangs/okoo/src/models/types"
 {{- if ne .ModelType "Mixin" }}	
 	"github.com/erlangs/pool/{{ .QueryPackageName }}"
 {{- end }}
 	"github.com/erlangs/pool/{{ .ModelsPackageName }}/{{ .SnakeName }}"
     "github.com/erlangs/pool/{{ .InterfacesPackageName }}"
 )
+
+var _ = actions.ActionActWindow
+var _ = types.Context{}
 
 // ------- MODEL ---------
 
@@ -143,11 +148,16 @@ var poolModelsDirTemplate = template.Must(template.New("").Parse(`
 package {{ .SnakeName }}
 
 import (
+	"github.com/erlangs/okoo/src/actions"
+	"github.com/erlangs/okoo/src/models/types"
     "github.com/erlangs/pool/{{ .QueryPackageName }}"
     "github.com/erlangs/pool/{{ .InterfacesPackageName }}"
 {{ range .Deps }} 	"{{ . }}"
 {{ end }}
 )
+
+var _ = actions.ActionActWindow
+var _ = types.Context{}
 
 // ------- FIELD COLLECTION ----------
 

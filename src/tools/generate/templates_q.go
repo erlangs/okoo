@@ -13,8 +13,13 @@ package {{ .QueryPackageName }}
 
 import (
 	"github.com/erlangs/okoo/src/models"
+	"github.com/erlangs/okoo/src/actions"
+	"github.com/erlangs/okoo/src/models/types"
 	"github.com/erlangs/pool/{{ .QueryPackageName }}/{{ .SnakeName }}"
 )
+
+var _ = actions.ActionActWindow
+var _ = types.Context{}
 
 type {{ .Name }}Condition = {{ .SnakeName }}.Condition
 
@@ -35,9 +40,14 @@ package {{ .SnakeName }}
 import (
 	"github.com/erlangs/okoo/src/models/operator"
 	"github.com/erlangs/okoo/src/models"
+	"github.com/erlangs/okoo/src/actions"
+	"github.com/erlangs/okoo/src/models/types"
 {{ range .TypesDeps }} 	"{{ . }}"
 {{ end }}
 )
+
+var _ = actions.ActionActWindow
+var _ = types.Context{}
 
 // ------- INTERFACES --------
 
