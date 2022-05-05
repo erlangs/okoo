@@ -19,6 +19,7 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"runtime"
 
 	"github.com/erlangs/okoo/src/actions"
 	"github.com/erlangs/okoo/src/controllers"
@@ -60,9 +61,20 @@ func runProject(projectDir, cmd string, args []string) {
 	}
 
 	cmdName := filepath.Base(absProjectDir)
-	if err = runCommand("go", "build", "-o", cmdName, absProjectDir); err != nil {
-		os.Exit(1)
+
+	sysType := runtime.GOOS
+	if sysType == "windows" {
+		if err = runCommand("go", "build", "-o", cmdName+".exe", absProjectDir); err != nil {
+			fmt.Println("Hexya is Exited")
+			os.Exit(1)
+		}
+	} else {
+		if err = runCommand("go", "build", "-o", cmdName, absProjectDir); err != nil {
+			fmt.Println("Hexya is Exited")
+			os.Exit(1)
+		}
 	}
+
 	runCommand(filepath.Join(absProjectDir, cmdName), append([]string{cmd}, args...)...)
 }
 
